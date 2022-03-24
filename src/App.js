@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./Header/Header";
@@ -6,6 +5,10 @@ import Home from "./Home/Home";
 import Products from "./Products/Products";
 import ProductDetails from "./ProductDetails/ProductDetails";
 import Cart from "./Cart/Cart";
+import Categories from "./Categories/Categories";
+import CategoryDetails from "./CategoryDetails/CategoryDetails";
+import Contact from "./Contact/Contact";
+import Thanks from "./Thanks/Thanks";
 
 function App() {
     return (
@@ -20,25 +23,24 @@ function App() {
                             path="/products/:productId"
                             element={<ProductDetails />}
                         />
-                        <Route
-                            path="/categories"
-                            element={<div>Categories</div>}
-                        />
+                        <Route path="/categories" element={<Categories />} />
                         <Route
                             path="categories/:categoryName"
-                            element={<div>Category details</div>}
+                            element={<CategoryDetails />}
                         />
                         <Route path="/cart" element={<Cart />} />
                         <Route path="/checkout" elemnet={<div>CheckOut</div>} />
-                        <Route path="/thanks" element={<div>Thank you</div>} />
+                        <Route path="/thanks" element={<Thanks />} />
                         <Route path="/faq" element={<div>FaQ</div>} />
-                        <Route path="/contact" element={<div>Contact</div>} />
+                        <Route path="/contact" element={<Contact />} />
                         <Route path="*" element={<div>Not found</div>} />
                     </Routes>
                 </div>
             </BrowserRouter>
 
-            <footer className="container">Footer</footer>
+            <footer className="container" style={{ textAlign: "center" }}>
+                © 2022 My Shop
+            </footer>
         </div>
     );
 }

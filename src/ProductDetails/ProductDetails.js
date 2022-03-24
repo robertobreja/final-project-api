@@ -11,7 +11,6 @@ function ProductDetails() {
             .then((res) => res.json())
             .then((productDetails) => {
                 console.log(productDetails);
-
                 if (productDetails) {
                     setCurrentProduct(productDetails);
 
