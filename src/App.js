@@ -9,6 +9,7 @@ import Categories from "./Categories/Categories";
 import CategoryDetails from "./CategoryDetails/CategoryDetails";
 import Contact from "./Contact/Contact";
 import Thanks from "./Thanks/Thanks";
+import Faq from "./Faq/Faq";
 
 function App() {
     return (
@@ -31,16 +32,14 @@ function App() {
                         <Route path="/cart" element={<Cart />} />
                         <Route path="/checkout" elemnet={<div>CheckOut</div>} />
                         <Route path="/thanks" element={<Thanks />} />
-                        <Route path="/faq" element={<div>FaQ</div>} />
+                        <Route path="/faq" element={<Faq />} />
                         <Route path="/contact" element={<Contact />} />
                         <Route path="*" element={<div>Not found</div>} />
                     </Routes>
                 </div>
             </BrowserRouter>
 
-            <footer className="container" style={{ textAlign: "center" }}>
-                © 2022 My Shop
-            </footer>
+            <footer className="container">© 2022 My Shop</footer>
         </div>
     );
 }
